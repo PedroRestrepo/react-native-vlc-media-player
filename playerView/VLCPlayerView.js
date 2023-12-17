@@ -208,16 +208,6 @@ export default class VLCPlayerView extends Component {
                 </Text>
               )}
             </View>
-            {showGG && (
-              <View style={styles.GG}>
-                <TimeLimt
-                  onEnd={() => {
-                    onEnd && onEnd();
-                  }}
-                  //maxTime={Math.ceil(this.state.totalTime)}
-                />
-              </View>
-            )}
           </View>
         </View>
         <View style={[styles.bottomView]}>
@@ -391,13 +381,13 @@ export default class VLCPlayerView extends Component {
    */
   onProgress(event) {
     /* console.log(
-     'position=' +
-     event.position +
-     ',currentTime=' +
-     event.currentTime +
-     ',remainingTime=' +
-     event.remainingTime,
-     );*/
+      'position=' +
+      event.position +
+      ',currentTime=' +
+      event.currentTime +
+      ',remainingTime=' +
+      event.remainingTime,
+      );*/
     let currentTime = event.currentTime;
     let loadingSuccess = false;
     if (currentTime > 0 || this.state.currentTime > 0) {
@@ -446,16 +436,16 @@ export default class VLCPlayerView extends Component {
       );
     } else {
       /* console.log('onEnded   error:'+this.props.uri);
-       this.vlcPlayer.resume && this.vlcPlayer.resume(false);*/
+        this.vlcPlayer.resume && this.vlcPlayer.resume(false);*/
       /*this.setState({
-        paused: true,
-      },()=>{
-        console.log('onEnded   error:'+this.props.uri);
-        this.reloadSuccess = false;
-        this.setState({
-          isError: true,
-        });
-      });*/
+         paused: true,
+       },()=>{
+         console.log('onEnded   error:'+this.props.uri);
+         this.reloadSuccess = false;
+         this.setState({
+           isError: true,
+         });
+       });*/
     }
   }
 
